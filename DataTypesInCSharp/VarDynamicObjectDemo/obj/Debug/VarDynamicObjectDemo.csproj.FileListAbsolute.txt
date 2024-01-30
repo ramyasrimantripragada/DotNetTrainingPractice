@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\VarDynamicObjectDemo\bin\Debug\VarDynamicObjectDemo.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\VarDynamicObjectDemo\bin\Debug\VarDynamicObjectDemo.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\VarDynamicObjectDemo\bin\Debug\VarDynamicObjectDemo.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\VarDynamicObjectDemo\obj\Debug\VarDynamicObjectDemo.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\VarDynamicObjectDemo\obj\Debug\VarDynamicObjectDemo.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\VarDynamicObjectDemo\obj\Debug\VarDynamicObjectDemo.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\VarDynamicObjectDemo\obj\Debug\VarDynamicObjectDemo.pdb

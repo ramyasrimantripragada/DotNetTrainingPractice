@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\DelegateDemo\bin\Debug\DelegateDemo.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\DelegateDemo\bin\Debug\DelegateDemo.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\DelegateDemo\bin\Debug\DelegateDemo.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\DelegateDemo\obj\Debug\DelegateDemo.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\DelegateDemo\obj\Debug\DelegateDemo.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\DelegateDemo\obj\Debug\DelegateDemo.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DataTypesInCSharp\DelegateDemo\obj\Debug\DelegateDemo.pdb
