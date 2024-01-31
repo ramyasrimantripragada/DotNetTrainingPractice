@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\NamedParameters\bin\Debug\NamedParameters.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\NamedParameters\bin\Debug\NamedParameters.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\NamedParameters\bin\Debug\NamedParameters.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\NamedParameters\obj\Debug\NamedParameters.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\NamedParameters\obj\Debug\NamedParameters.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\NamedParameters\obj\Debug\NamedParameters.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\NamedParameters\obj\Debug\NamedParameters.pdb

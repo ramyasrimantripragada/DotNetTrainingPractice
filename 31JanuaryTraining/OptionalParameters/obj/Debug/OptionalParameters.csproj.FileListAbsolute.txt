@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\OptionalParameters\bin\Debug\OptionalParameters.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\OptionalParameters\bin\Debug\OptionalParameters.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\OptionalParameters\bin\Debug\OptionalParameters.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\OptionalParameters\obj\Debug\OptionalParameters.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\OptionalParameters\obj\Debug\OptionalParameters.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\OptionalParameters\obj\Debug\OptionalParameters.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\OptionalParameters\obj\Debug\OptionalParameters.pdb

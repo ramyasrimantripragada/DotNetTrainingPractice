@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\Params\bin\Debug\Params.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\Params\bin\Debug\Params.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\Params\bin\Debug\Params.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\Params\obj\Debug\Params.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\Params\obj\Debug\Params.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\Params\obj\Debug\Params.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\Params\obj\Debug\Params.pdb

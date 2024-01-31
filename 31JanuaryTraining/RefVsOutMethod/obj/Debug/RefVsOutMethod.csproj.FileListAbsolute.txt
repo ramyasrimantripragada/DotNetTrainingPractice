@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\RefVsOutMethod\bin\Debug\RefVsOutMethod.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\RefVsOutMethod\bin\Debug\RefVsOutMethod.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\RefVsOutMethod\bin\Debug\RefVsOutMethod.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\RefVsOutMethod\obj\Debug\RefVsOutMethod.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\RefVsOutMethod\obj\Debug\RefVsOutMethod.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\RefVsOutMethod\obj\Debug\RefVsOutMethod.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\31JanuaryTraining\RefVsOutMethod\obj\Debug\RefVsOutMethod.pdb
