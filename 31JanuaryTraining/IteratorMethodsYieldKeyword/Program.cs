@@ -31,7 +31,7 @@ namespace IteratorMethodsYieldKeyword
             Console.WriteLine("End of Iterator");
         }
 
-       System.Collections.IEnumerator
+      System.Collections.IEnumerator
        System.Collections.IEnumerable.GetEnumerator()
         {
             // Invoke IEnumerator<string> GetEnumerator() above.
@@ -43,6 +43,8 @@ namespace IteratorMethodsYieldKeyword
     {
         static void Main()
         {
+           // CSharpBuiltInTypes c = new CSharpBuiltInTypes();
+            //Console.WriteLine(c.ToString());
             var keywords = new CSharpBuiltInTypes();
             Console.WriteLine("Value of keywords: " + string.Join(" ", keywords));
             foreach (string keyword in keywords)
@@ -50,6 +52,7 @@ namespace IteratorMethodsYieldKeyword
                 Console.WriteLine(keyword);
             }
              Console.ReadLine();
+           
         }
     }
 }

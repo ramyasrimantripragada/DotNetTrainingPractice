@@ -89,6 +89,7 @@ namespace AsyncAwait
             Console.WriteLine("Before run block in School started ");
             await Task.Run(() =>
             {
+                Task.Delay(1000);
                 Thread.Sleep(8000);
                 Console.WriteLine("School Started");
             });

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArithmeticOperations</name>
+    </assembly>
+    <members>
+        <member name="T:ArithmeticOperations.ArithmeticOperationsClass">
+            <summary>
+            Class for Performing Basic Arithmetic Operations on Two Integers
+            </summary>
+        </member>
+        <member name="M:ArithmeticOperations.ArithmeticOperationsClass.add(System.Int32,System.Int32)">
+            <summary>
+            Method to perform addition on Two Integers 
+            </summary>
+            <param name="num1">First Integer</param>
+            <param name="num2">Second Integer</param>
+            <returns>Integral sum of num1 and num2</returns>
+        </member>
+        <member name="M:ArithmeticOperations.ArithmeticOperationsClass.subtract(System.Int32,System.Int32)">
+            <summary>
+            Method to perform subtraction on Two Integers
+            </summary>
+            <param name="num1">First Integer</param>
+            <param name="num2">Second Integer</param>
+            <returns>Integral subtraction of num2 from num1</returns>
+        </member>
+        <member name="M:ArithmeticOperations.ArithmeticOperationsClass.multiply(System.Int32,System.Int32)">
+            <summary>
+            Method to perform multiplication on Two Integers
+            </summary>
+            <param name="num1">First Integer</param>
+            <param name="num2">Second Integer</param>
+            <returns>Integral product of num1 and num2</returns>
+        </member>
+        <member name="M:ArithmeticOperations.ArithmeticOperationsClass.divide(System.Int32,System.Int32)">
+            <summary>
+            Method to perform division on Two Integers 
+            </summary>
+            <param name="num1">First Integer</param>
+            <param name="num2">Second Integer</param>
+            <returns>Integral division quotient of num1 divided by num2</returns>
+        </member>
+        <member name="M:ArithmeticOperations.ArithmeticOperationsClass.modular(System.Int32,System.Int32)">
+            <summary>
+            Method to perform modular division on Two Integers 
+            </summary>
+            <param name="num1">First Integer</param>
+            <param name="num2">Second Integer
+            </param>
+            <returns>Integral division remainder of num1 divided by num2</returns>
+        </member>
+    </members>
+</doc>

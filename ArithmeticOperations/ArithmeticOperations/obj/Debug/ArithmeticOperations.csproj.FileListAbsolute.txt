@@ -1,0 +1,14 @@
+C:\Users\ramya_mantripragada\source\repos\ArithmeticOperations\ArithmeticOperations\bin\Debug\ArithmeticOperations.xml
+C:\Users\ramya_mantripragada\source\repos\ArithmeticOperations\ArithmeticOperations\bin\Debug\ArithmeticOperations.dll
+C:\Users\ramya_mantripragada\source\repos\ArithmeticOperations\ArithmeticOperations\bin\Debug\ArithmeticOperations.pdb
+C:\Users\ramya_mantripragada\source\repos\ArithmeticOperations\ArithmeticOperations\obj\Debug\ArithmeticOperations.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\ArithmeticOperations\ArithmeticOperations\obj\Debug\ArithmeticOperations.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\ArithmeticOperations\ArithmeticOperations\obj\Debug\ArithmeticOperations.dll
+C:\Users\ramya_mantripragada\source\repos\ArithmeticOperations\ArithmeticOperations\obj\Debug\ArithmeticOperations.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\ArithmeticOperations\ArithmeticOperations\bin\Debug\ArithmeticOperations.xml
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\ArithmeticOperations\ArithmeticOperations\bin\Debug\ArithmeticOperations.dll
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\ArithmeticOperations\ArithmeticOperations\bin\Debug\ArithmeticOperations.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\ArithmeticOperations\ArithmeticOperations\obj\Debug\ArithmeticOperations.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\ArithmeticOperations\ArithmeticOperations\obj\Debug\ArithmeticOperations.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\ArithmeticOperations\ArithmeticOperations\obj\Debug\ArithmeticOperations.dll
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\ArithmeticOperations\ArithmeticOperations\obj\Debug\ArithmeticOperations.pdb

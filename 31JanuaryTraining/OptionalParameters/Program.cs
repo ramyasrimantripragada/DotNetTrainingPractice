@@ -28,7 +28,13 @@ namespace OptionalParameters
             printEmployeeInfo(1, gender: "Female", name: "Rose");
             Console.WriteLine("Sending All params");
             printEmployeeInfo(1, "Rose", 25, "Female");
+           // int i;
+            bool b = int.TryParse("z100", out int i);
+            bool b1 = float.TryParse("86.9", out float f);
+            Console.WriteLine(f);
+            Console.WriteLine(i);
             Console.ReadLine();
         }
     }
 }
+

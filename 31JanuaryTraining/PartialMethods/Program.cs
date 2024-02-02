@@ -16,6 +16,10 @@ namespace PartialMethods
             p.incrementNumPublic();
             Console.WriteLine("Displaying value of num");
             p.displayNumPublic();
+            Child1 c = new Child1(1,2);
+            c.method1();
+            c.method2();
+            try
             Console.ReadLine();
         }
     }
