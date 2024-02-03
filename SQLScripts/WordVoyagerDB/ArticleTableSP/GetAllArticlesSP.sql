@@ -1,15 +1,13 @@
---Creating a new Stored Procedure for fetching all Articles 
+--Stored Procedure for fetching all Articles 
+--UseCase: When all the articles need to be displayed
 CREATE PROCEDURE uspGetAllArticles
 AS
 BEGIN
 	SELECT * FROM Article;
 END
-GO
 
 --Executing GetAllArticles Stored Procedure
 EXECUTE uspGetAllArticles;
-GO
 
 --Deleting GetAllArticles Stored Procedure
 DROP PROCEDURE uspGetAllArticles;
-GO

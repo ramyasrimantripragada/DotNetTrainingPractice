@@ -1,11 +1,11 @@
 --Stored Procedure to delete User by UserId
+--UseCase: When a User deletes his Account
 CREATE PROCEDURE uspDeleteUserByUserId 
 	@UserId int
 AS
 BEGIN
 	DELETE FROM [User] WHERE UserId = @UserId;
 END
-GO
 
 --Executing DeleteUserByUserId
 EXECUTE uspDeleteUserByUserId 1;

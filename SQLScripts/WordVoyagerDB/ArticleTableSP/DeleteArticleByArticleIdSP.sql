@@ -1,16 +1,14 @@
---Creating a new Stored Procedure for deleting article by ArticleId
+--Stored Procedure for deleting article by ArticleId
+--UseCase: When a user(Author) wants to delete an article
 CREATE PROCEDURE uspDeleteArticleByArticleId
 	@ArticleId int
 AS
 BEGIN
 	DELETE FROM Article WHERE ArticleId =  @ArticleId;
 END
-GO
 
 --Executing DeleteArticleByArticleId Stored Procedure
 EXECUTE uspDeleteArticleByArticleId 1;
-GO
 
 --Deleting DeleteArticleByArticleId Stored Procedure
 DROP PROCEDURE uspDeleteArticleByArticleId;
-GO

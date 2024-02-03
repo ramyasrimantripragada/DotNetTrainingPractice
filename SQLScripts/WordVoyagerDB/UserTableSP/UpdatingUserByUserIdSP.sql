@@ -1,4 +1,5 @@
---Creating a new procedure for Updating in User table using UserId
+--Stored Procedure for Updating in User table using UserId
+--UseCase: When Users wants to edit/update their details
 CREATE PROCEDURE uspUpdateUserByUserId 
 	@UserId int,
 	@UserName nvarchar(100),
@@ -10,4 +11,9 @@ BEGIN
 	SET UserName = @UserName, Email = @Email, PasswordHash = @PasswordHash
 	WHERE UserId = @UserId;	
 END 
-GO
+
+--Executing UpdateUserByUserId Stored Procedure
+EXECUTE uspUpdateUserByUserId 1, "Ramya Sri", "ramya@gmail.com", "pass@789";
+
+--Deleting UpdateUserByUserId Stored Procedure
+DROP PROCEDURE uspUpdateUserByUserId;
