@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\RamyaCollections\RamyaList\bin\Debug\RamyaList.xml
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\RamyaCollections\RamyaList\bin\Debug\RamyaList.dll
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\RamyaCollections\RamyaList\bin\Debug\RamyaList.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\RamyaCollections\RamyaList\obj\Debug\RamyaList.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\RamyaCollections\RamyaList\obj\Debug\RamyaList.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\RamyaCollections\RamyaList\obj\Debug\RamyaList.dll
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\RamyaCollections\RamyaList\obj\Debug\RamyaList.pdb

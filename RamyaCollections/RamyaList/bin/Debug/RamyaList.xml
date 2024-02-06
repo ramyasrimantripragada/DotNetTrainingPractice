@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RamyaList</name>
+    </assembly>
+    <members>
+        <member name="T:RamyaCollections.Node`1">
+            <summary>
+            Class for Storing Structure of Node for Single Linked List
+            </summary>
+            <typeparam name="T">Indicates that Node is generic</typeparam>
+        </member>
+        <member name="F:RamyaCollections.Node`1.Data">
+            <summary>
+            Instance variable which stores data of type T
+            </summary>
+        </member>
+        <member name="F:RamyaCollections.Node`1.Next">
+            <summary>
+            Instance variable which stores reference to next Node of Type T
+            </summary>
+        </member>
+        <member name="M:RamyaCollections.Node`1.#ctor(`0)">
+            <summary>
+            Constructor to initialize Node
+            </summary>
+            <param name="data">Data of type T</param>
+        </member>
+        <member name="T:RamyaCollections.RamyaList`1">
+            <summary>
+            Collection RamyaList which internally implements Single Linked List
+            </summary>
+            <typeparam name="T">Indicates that RamyaList is a generic collection</typeparam>
+        </member>
+        <member name="F:RamyaCollections.RamyaList`1.head">
+            <summary>
+            The Node of Type T referencing to the head of the RamyaList
+            </summary>
+        </member>
+        <member name="F:RamyaCollections.RamyaList`1.count">
+            <summary>
+            count of type int stores the number of Nodes in the RamyaList
+            </summary>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.#ctor">
+            <summary>
+            Initializes head to null and count to zero
+            </summary>
+        </member>
+        <member name="P:RamyaCollections.RamyaList`1.Item(System.Int32)">
+            <summary>
+            Used for setting and getting values at given index 
+            </summary>
+            <param name="index">The index at which the element need to be accessed or modified</param>
+            <returns>Returns value at given index while accessing</returns>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.InsertAt(System.Int32,`0)">
+            <summary>
+            Inserts given data at given position
+            </summary>
+            <param name="position">The position at which data need to be inserted</param>
+            <param name="data">The data of Type T</param>
+            <exception cref="T:System.IndexOutOfRangeException">Throws IndexOutOfRangeException when position id below 0 or above size of List</exception>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.Add(`0)">
+            <summary>
+            Inserts given data at the end of the List
+            </summary>
+            <param name="data">The data of Type T</param>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.FromArray(`0[])">
+            <summary>
+            Creates a List from Array
+            </summary>
+            <param name="array">Array of Type T</param>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.InsertRange(System.Int32,System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Inserts given collection at given Index
+            </summary>
+            <param name="index">The index at which the collection needs to be inserted</param>
+            <param name="collection">IEnumerable of Type T</param>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.AddCollection(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Appends given collection at the end of the List
+            </summary>
+            <param name="collection">Collection of type IEnumerable which needs to be appended to the List</param>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.Pop">
+            <summary>
+            Deletes at the end
+            </summary>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.DeleteAt(System.Int32)">
+            <summary>
+            Deletes the element at given position
+            </summary>
+            <param name="position">The position at which data needs to be deleted</param>
+            <exception cref="T:System.IndexOutOfRangeException">Throws IndexOutOfRangeException when position Is below 0 or above size of List</exception>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.Clear">
+            <summary>
+            Clears all the data and sets the head to Null
+            </summary>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.Remove(`0)">
+            <summary>
+            Removes the Node with given value of type T
+            </summary>
+            <param name="value">Data which needs to be deleted</param>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.RemoveRange(System.Int32,System.Int32)">
+            <summary>
+            Removes range of elements from the List
+            </summary>
+            <param name="index">The index at which the range starts</param>
+            <param name="count">Number of elements to be removed from Index count</param>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.UpdateAt(System.Int32,`0)">
+            <summary>
+            Updates the value at given Position
+            </summary>
+            <param name="position">The position at which data needs to be updated</param>
+            <param name="value">New value of Data</param>
+            <exception cref="T:System.IndexOutOfRangeException">Throws IndexOutOfRangeException when position Is below 0 or above size of List</exception>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.AccessAt(System.Int32)">
+            <summary>
+            Access the Data at given position
+            </summary>
+            <param name="position">The position at which data needs to be accessed</param>
+            <returns>The value of Type T at given position</returns>
+            <exception cref="T:System.IndexOutOfRangeException">Throws IndexOutOfRangeException when position Is below 0 or above size of List</exception>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.Traverse">
+            <summary>
+            Traverses through the List and prints the values
+            </summary>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.ForEach(System.Action{`0})">
+            <summary>
+            Creating forEach loop to traverse through the List
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.GetEnumerator">
+            <summary>
+            Generates an ENumerator for the List
+            </summary>
+            <returns>Returns IEnumerator of Type T for List</returns>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.GetRange(System.Int32,System.Int32)">
+            <summary>
+            Fetches data in given range as IEnumerable Object of Type T
+            </summary>
+            <param name="index">The start index at which the data access should start</param>
+            <param name="count">The number of elements to be accessed from given index</param>
+            <returns>IEnumerable object of Type T of data in given range</returns>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.ToArray">
+            <summary>
+            Converts List to Array of Type T
+            </summary>
+            <returns>Returns Array of Type T</returns>
+        </member>
+        <member name="P:RamyaCollections.RamyaList`1.Count">
+            <summary>
+            Returns the count or size of the List
+            </summary>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.Exists(`0)">
+            <summary>
+            Searches if given value is present in the List or not
+            </summary>
+            <param name="value">The value of Type T which needs to be searched</param>
+            <returns>True if given value exists; false otherwise</returns>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.IndexOf(`0)">
+            <summary>
+            Searches for given value and returns index of first Occurrence
+            </summary>
+            <param name="value">The value of Type T which needs to be searched</param>
+            <returns>Returns Index of first occurrence if present; -1 otherwise</returns>
+        </member>
+        <member name="M:RamyaCollections.RamyaList`1.LastIndexOf(`0)">
+            <summary>
+            Searches for given value and returns index of last Occurrence
+            </summary>
+            <param name="value">The value of Type T which needs to be searched</param>
+            <returns>Returns Index of last occurrence if present; -1 otherwise</returns>
+        </member>
+    </members>
+</doc>

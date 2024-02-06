@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="Logo.jpg" alt="WordVoyager" width="125" height="50" />
+                Word Voyager
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">New Article</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">.Net</a></li>
+                            <li><a class="dropdown-item" href="#">Java</a></li>
+                            <li><a class="dropdown-item" href="#">Testing</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-secondary me-md-2" type="button">Logout</button>
+                </div>
+                </div>
+        </div>
+    </nav>
+    <div class="container card-body" >
+        <div class=" row row-cols-auto">
+            <div class="card" style="width: 33%;">
+                <img src="https://th.bing.com/th/id/OIP._7UjpXIZSz8WNKsjbca07QHaEK?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-image-top" height="200" alt=".Net">
+                <div class="card-body">
+                    <h5 class="card-title">.Net FrameWork</h5>
+                    <p class="card-text">
+                        .NET is a free, cross-platform, open-source developer platform for building many kinds of applications. It can run programs written in multiple languages, with C# being the most popular.
+                    </p>
+                    <a href="#" class="btn btn-primary">View Full Article</a>
+                </div>
+            </div>
+            <div class="card" style="width: 33%;">
+                <img src="https://th.bing.com/th/id/OIP.D3IaCwQnOIEG8ZB8q9tKUwAAAA?w=146&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-image-top" height="200" alt="Java">
+                <div class="card-body">
+                    <h5 class="card-title">Java</h5>
+                    <p class="card-text">
+                        Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.
+                    </p>
+                    <a href="#" class="btn btn-primary">View Full Article</a>
+                </div>
+            </div>
+            <div class="card" style="width: 33%;">
+                <img src="https://th.bing.com/th/id/OIP.2AmEAfprJ8JZ78tbzJQiwQHaE8?w=269&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-image-top" height="200" alt="Testing">
+                <div class="card-body">
+                    <h5 class="card-title">Testing</h5>
+                    <p class="card-text">
+                        Software Testing is a method to assess the functionality of the software program. The process checks whether the actual software matches the expected requirements and ensures the software is bug-free.
+                    </p>
+                    <a href="#" class="btn btn-primary">View Full Article</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
