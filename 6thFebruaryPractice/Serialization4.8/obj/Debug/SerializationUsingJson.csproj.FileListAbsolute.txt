@@ -1,0 +1,2 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Serialization4.8\obj\Debug\SerializationUsingJson.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Serialization4.8\obj\Debug\SerializationUsingJson.csproj.CoreCompileInputs.cache

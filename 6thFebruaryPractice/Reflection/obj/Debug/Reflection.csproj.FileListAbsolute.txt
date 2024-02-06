@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Reflection\bin\Debug\Reflection.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Reflection\bin\Debug\Reflection.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Reflection\bin\Debug\Reflection.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Reflection\obj\Debug\Reflection.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Reflection\obj\Debug\Reflection.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Reflection\obj\Debug\Reflection.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Reflection\obj\Debug\Reflection.pdb

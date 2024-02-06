@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ConversionPractice\bin\Debug\ConversionPractice.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ConversionPractice\bin\Debug\ConversionPractice.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ConversionPractice\bin\Debug\ConversionPractice.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ConversionPractice\obj\Debug\ConversionPractice.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ConversionPractice\obj\Debug\ConversionPractice.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ConversionPractice\obj\Debug\ConversionPractice.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ConversionPractice\obj\Debug\ConversionPractice.pdb

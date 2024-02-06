@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Delegates\bin\Debug\Delegates.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Delegates\bin\Debug\Delegates.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Delegates\bin\Debug\Delegates.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Delegates\obj\Debug\Delegates.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Delegates\obj\Debug\Delegates.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Delegates\obj\Debug\Delegates.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\Delegates\obj\Debug\Delegates.pdb

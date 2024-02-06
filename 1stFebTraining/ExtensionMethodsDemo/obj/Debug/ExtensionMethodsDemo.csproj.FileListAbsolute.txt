@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ExtensionMethodsDemo\bin\Debug\ExtensionMethodsDemo.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ExtensionMethodsDemo\bin\Debug\ExtensionMethodsDemo.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ExtensionMethodsDemo\bin\Debug\ExtensionMethodsDemo.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ExtensionMethodsDemo\obj\Debug\ExtensionMethodsDemo.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ExtensionMethodsDemo\obj\Debug\ExtensionMethodsDemo.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ExtensionMethodsDemo\obj\Debug\ExtensionMethodsDemo.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\1stFebTraining\ExtensionMethodsDemo\obj\Debug\ExtensionMethodsDemo.pdb

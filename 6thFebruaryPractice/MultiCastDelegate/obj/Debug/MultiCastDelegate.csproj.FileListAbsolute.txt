@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\MultiCastDelegate\bin\Debug\MultiCastDelegate.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\MultiCastDelegate\bin\Debug\MultiCastDelegate.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\MultiCastDelegate\bin\Debug\MultiCastDelegate.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\MultiCastDelegate\obj\Debug\MultiCastDelegate.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\MultiCastDelegate\obj\Debug\MultiCastDelegate.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\MultiCastDelegate\obj\Debug\MultiCastDelegate.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\6thFebruaryPractice\MultiCastDelegate\obj\Debug\MultiCastDelegate.pdb
