@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBConnectionAndCRUD", "DBConnectionAndCRUD\DBConnectionAndCRUD.csproj", "{0E9B202C-F921-42D4-9CE5-DF71083BB4AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingSPAndDataSet", "UsingSPAndDataSet\UsingSPAndDataSet.csproj", "{1BC87E80-BA7B-45C3-87A5-7818D1933F52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0E9B202C-F921-42D4-9CE5-DF71083BB4AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E9B202C-F921-42D4-9CE5-DF71083BB4AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E9B202C-F921-42D4-9CE5-DF71083BB4AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BC87E80-BA7B-45C3-87A5-7818D1933F52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC87E80-BA7B-45C3-87A5-7818D1933F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC87E80-BA7B-45C3-87A5-7818D1933F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC87E80-BA7B-45C3-87A5-7818D1933F52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

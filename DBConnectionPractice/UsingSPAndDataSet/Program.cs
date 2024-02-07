@@ -1,8 +1,10 @@
 ﻿using System.Data.SqlClient;
 using System;
 using System.Linq;
+using System.Data;
+using System.Xml.Linq;
 
-namespace DBConnectionAndCRUD
+namespace UsingSPAndDataSet
 {
 
 
@@ -16,14 +18,44 @@ namespace DBConnectionAndCRUD
             this.connection.Open();
         }
 
-        public void InsertEmployee(string Name, string Designation, string Department)
+        public void InsertEmployee(string name, string designation, string department)
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandText = "INSERT INTO EMPLOYEE(Name,Designation,Department) " +
-                "VALUES('" + Name + "','" + Designation + "','" + Department + "') " + "SELECT SCOPE_IDENTITY()";
-            command.Connection = this.connection;
-            int id = Convert.ToInt32(command.ExecuteScalar());
-            if(id>0)
+            SqlCommand command = new SqlCommand("uspInsertEmployee", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            SqlParameter nameParam = new SqlParameter()
+            {
+                ParameterName = "@Name",
+                Value = name,
+                SqlDbType = SqlDbType.VarChar,
+                Direction = ParameterDirection.Input,
+            };
+            command.Parameters.Add(nameParam);
+            SqlParameter designationParam = new SqlParameter()
+            {
+                ParameterName = "@Designation",
+                Value = designation,
+                SqlDbType = SqlDbType.VarChar,
+                Direction = ParameterDirection.Input,
+            };
+            command.Parameters.Add(designationParam);
+            SqlParameter departmentParam = new SqlParameter()
+            {
+                ParameterName = "@Department",
+                Value = department,
+                SqlDbType = SqlDbType.VarChar,
+                Direction = ParameterDirection.Input,
+            };
+            command.Parameters.Add(departmentParam);
+            SqlParameter idParam = new SqlParameter()
+            {
+                ParameterName = "@EmployeeId",
+                SqlDbType = SqlDbType.Int,
+                Direction = ParameterDirection.Output,
+            };
+            command.Parameters.Add(idParam);
+            command.ExecuteNonQuery();
+            int id = int.Parse(idParam.Value.ToString());
+            if (id > 0)
             {
                 Console.WriteLine("Employee Data Inserted Successfully!!");
                 Console.WriteLine("Employee ID: " + id);
@@ -34,11 +66,18 @@ namespace DBConnectionAndCRUD
 
         public void DeleteEmployee(int id)
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandText = "DELETE FROM EMPLOYEE WHERE EmployeeId="+id;
-            command.Connection = this.connection;
+            SqlCommand command = new SqlCommand("uspDeleteEmployee", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            SqlParameter idParam = new SqlParameter()
+            {
+                ParameterName = "@EmployeeId",
+                Value = id,
+                SqlDbType = SqlDbType.Int,
+                Direction = ParameterDirection.Input,
+            };
+            command.Parameters.Add(idParam);
             int status = command.ExecuteNonQuery();
-            if(status>0)
+            if (status > 0)
             {
                 Console.WriteLine("Employee Record Deleted Successfully!!");
             }
@@ -50,25 +89,42 @@ namespace DBConnectionAndCRUD
 
         public void DisplayEmployees()
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandText = "SELECT * FROM EMPLOYEE";
-            command.Connection = this.connection;
-            SqlDataReader sqlDataReader = command.ExecuteReader();
+            SqlCommand command = new SqlCommand("uspGetEmployeeRecords", connection);
+            command.CommandType= CommandType.StoredProcedure;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.TableMappings.Add("Table", "EMPLOYEE");
+            adapter.SelectCommand = command;
+            DataSet dataSet = new DataSet("EMPLOYEE");
+            adapter.Fill(dataSet);
             Console.WriteLine("EmpId\tEmployee Name\tDesignation\tDepartment\tJoining Date");
-            while (sqlDataReader.Read() == true)
+            foreach(DataRow row in dataSet.Tables[0].Rows)
             {
-                Console.WriteLine(sqlDataReader[0] + "\t" + sqlDataReader[1] + "\t" + sqlDataReader[2] + "\t" + sqlDataReader[3] + "\t" + sqlDataReader[4]);
+                Console.WriteLine(row[0] + "\t" + row[1] + "\t" + row[2] + "\t" + row[3] + "\t" + row[4]);
             }
-            sqlDataReader.Close();
         }
 
-        public void UpdateEmployeeName(int empId,string name)
+        public void UpdateEmployeeName(int empId, string name)
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandText = "UPDATE EMPLOYEE SET Name='" + name + "' WHERE EmployeeId=" + empId;
-            command.Connection = this.connection;
+            SqlCommand command = new SqlCommand("uspUpdateEmployeeName", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            SqlParameter idParam = new SqlParameter()
+            {
+                ParameterName = "@EmployeeId",
+                Value = empId,
+                SqlDbType = SqlDbType.Int,
+                Direction = ParameterDirection.Input,
+            };
+            command.Parameters.Add(idParam);
+            SqlParameter nameParam = new SqlParameter()
+            {
+                ParameterName = "@Name",
+                Value = name,
+                SqlDbType = SqlDbType.VarChar,
+                Direction = ParameterDirection.Input,
+            };
+            command.Parameters.Add(nameParam);
             int status = command.ExecuteNonQuery();
-            if(status>0)
+            if (status > 0)
             {
                 Console.WriteLine("Employee Name Updated Successfully!!");
             }
@@ -79,11 +135,26 @@ namespace DBConnectionAndCRUD
             }
         }
 
-        public void UpdateEmployeeDesignation(int empId,string designation)
+        public void UpdateEmployeeDesignation(int empId, string designation)
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandText = "UPDATE EMPLOYEE SET Designation='" + designation + "' WHERE EmployeeId=" + empId;
-            command.Connection = this.connection;
+            SqlCommand command = new SqlCommand("uspUpdateEmployeeDesignation", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            SqlParameter idParam = new SqlParameter()
+            {
+                ParameterName = "@EmployeeId",
+                Value = empId,
+                SqlDbType = SqlDbType.Int,
+                Direction = ParameterDirection.Input,
+            };
+            command.Parameters.Add(idParam);
+            SqlParameter designationParam = new SqlParameter()
+            {
+                ParameterName = "@Designation",
+                Value = designation,
+                SqlDbType = SqlDbType.VarChar,
+                Direction = ParameterDirection.Input,
+            };
+            command.Parameters.Add(designationParam);
             int status = command.ExecuteNonQuery();
             if (status > 0)
             {
@@ -98,9 +169,24 @@ namespace DBConnectionAndCRUD
 
         public void UpdateEmployeeDepartment(int empId, string department)
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandText = "UPDATE EMPLOYEE SET Department='" + department + "' WHERE EmployeeId=" + empId;
-            command.Connection = this.connection;
+            SqlCommand command = new SqlCommand("uspUpdateEmployeeDepartment", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            SqlParameter idParam = new SqlParameter()
+            {
+                ParameterName = "@EmployeeId",
+                Value = empId,
+                SqlDbType = SqlDbType.Int,
+                Direction = ParameterDirection.Input,
+            };
+            command.Parameters.Add(idParam);
+            SqlParameter departmentParam = new SqlParameter()
+            {
+                ParameterName = "@Department",
+                Value = department,
+                SqlDbType = SqlDbType.VarChar,
+                Direction = ParameterDirection.Input,
+            };
+            command.Parameters.Add(departmentParam);
             int status = command.ExecuteNonQuery();
             if (status > 0)
             {
@@ -138,7 +224,7 @@ namespace DBConnectionAndCRUD
                 Console.WriteLine("5.Exit");
                 Console.Write("Enter choice: ");
                 choice = int.Parse(Console.ReadLine());
-                
+
                 switch (choice)
                 {
                     //displaying employee table records
@@ -163,7 +249,7 @@ namespace DBConnectionAndCRUD
                         empId = int.Parse(Console.ReadLine());
                         Console.Write("Do you want to update Name of Employee[y/n]: ");
                         selection = Console.ReadLine();
-                        if(selection.SequenceEqual("y") || selection.SequenceEqual("Y"))
+                        if (selection.SequenceEqual("y") || selection.SequenceEqual("Y"))
                         {
                             Console.Write("Enter Employee Name: ");
                             name = Console.ReadLine();

@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\UsingSPAndDataSet\bin\Debug\UsingSPAndDataSet.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\UsingSPAndDataSet\bin\Debug\UsingSPAndDataSet.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\UsingSPAndDataSet\bin\Debug\UsingSPAndDataSet.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\UsingSPAndDataSet\obj\Debug\UsingSPAndDataSet.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\UsingSPAndDataSet\obj\Debug\UsingSPAndDataSet.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\UsingSPAndDataSet\obj\Debug\UsingSPAndDataSet.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\UsingSPAndDataSet\obj\Debug\UsingSPAndDataSet.pdb
