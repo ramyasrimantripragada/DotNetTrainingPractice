@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\DBConnectionAndCRUD\bin\Debug\DBConnectionAndCRUD.exe.config
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\DBConnectionAndCRUD\bin\Debug\DBConnectionAndCRUD.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\DBConnectionAndCRUD\bin\Debug\DBConnectionAndCRUD.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\DBConnectionAndCRUD\obj\Debug\DBConnectionAndCRUD.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\DBConnectionAndCRUD\obj\Debug\DBConnectionAndCRUD.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\DBConnectionAndCRUD\obj\Debug\DBConnectionAndCRUD.exe
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\DBConnectionAndCRUD\obj\Debug\DBConnectionAndCRUD.pdb

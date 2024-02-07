@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        body {
+            background-image: url('https://wallpapercave.com/wp/wp7133989.jpg'); /* Grey colored background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        
+        .login-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-top: 50px;
+            background-color: white; 
+        }
+    </style>
+</head>
+<body >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="Logo.jpg" alt="WordVoyager" width="125" height="50" />
+                Word Voyager
+            </a>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a href="Registration.html" class="btn btn-secondary me-md-2">Register</a>
+            <!--  <button class="btn btn-secondary me-md-2" type="button" onclick="Registration.html">Register</button> -->
+                </div>
+            </nav>
+
+            <div class="container">
+                <div class="login-container">
+                    <h2 class="text-center">Login</h2>
+                    <form action="Index.html">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username" size="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" href="Index.html">Login</button>
+                        <div class="text-center mt-2">
+                            <a href="#" class="text-muted">Forgot Password?</a>
+                        </div>
+                    </form>
+                    <div class="text-center mt-3">
+                        <span>Don't have an account? </span><a href="Registration.html" class="text-primary">Register here</a>
+                    </div>
+                </div>
+            </div>
+
+    </body>
+    </html>
