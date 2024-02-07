@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 namespace Serialization
 {
@@ -28,6 +29,8 @@ namespace Serialization
             Console.WriteLine("Department: " + department);
         }
     }
+
+   
     internal class Program
     {
 
@@ -47,7 +50,7 @@ namespace Serialization
              Console.WriteLine("Displaying details in Emp2");
              emp2.displayDetails();*/
             fs.Close();
-
+           
             Console.ReadLine();
         }
     }
