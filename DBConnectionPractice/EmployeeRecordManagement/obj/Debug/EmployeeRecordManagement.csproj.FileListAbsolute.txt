@@ -1,0 +1,7 @@
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\EmployeeRecordManagement\bin\Debug\EmployeeRecordManagement.dll
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\EmployeeRecordManagement\bin\Debug\EmployeeRecordManagement.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\EmployeeRecordManagement\obj\Debug\EmployeeRecordManagement.csproj.AssemblyReference.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\EmployeeRecordManagement\obj\Debug\EmployeeRecordManagement.csproj.CoreCompileInputs.cache
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\EmployeeRecordManagement\obj\Debug\EmployeeRecordManagement.dll
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\EmployeeRecordManagement\obj\Debug\EmployeeRecordManagement.pdb
+C:\Users\ramya_mantripragada\source\repos\DotNetTrainingPractice\DBConnectionPractice\EmployeeRecordManagement\bin\Debug\EmployeeRecordManagement.xml

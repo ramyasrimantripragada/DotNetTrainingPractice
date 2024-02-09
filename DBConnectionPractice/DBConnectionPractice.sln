@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBConnectionAndCRUD", "DBCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingSPAndDataSet", "UsingSPAndDataSet\UsingSPAndDataSet.csproj", "{1BC87E80-BA7B-45C3-87A5-7818D1933F52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeRecordManagementWindowsApp", "WordVoyagerWindowsApp\EmployeeRecordManagementWindowsApp.csproj", "{197DF52B-2AB3-4FD5-AE9A-FA40826BFDB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeRecordManagement", "EmployeeRecordManagement\EmployeeRecordManagement.csproj", "{A57C6B49-3249-40B7-94C3-066C09BCE277}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{1BC87E80-BA7B-45C3-87A5-7818D1933F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BC87E80-BA7B-45C3-87A5-7818D1933F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BC87E80-BA7B-45C3-87A5-7818D1933F52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{197DF52B-2AB3-4FD5-AE9A-FA40826BFDB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{197DF52B-2AB3-4FD5-AE9A-FA40826BFDB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{197DF52B-2AB3-4FD5-AE9A-FA40826BFDB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{197DF52B-2AB3-4FD5-AE9A-FA40826BFDB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A57C6B49-3249-40B7-94C3-066C09BCE277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57C6B49-3249-40B7-94C3-066C09BCE277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57C6B49-3249-40B7-94C3-066C09BCE277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57C6B49-3249-40B7-94C3-066C09BCE277}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
