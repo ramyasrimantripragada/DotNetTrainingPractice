@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WordVoyagerModelStoreContainer" CdmEntityContainer="WordVoyagerEntities">
+    <EntitySetMapping Name="Articles">
+      <EntityTypeMapping TypeName="WordVoyagerModel.Article">
+        <MappingFragment StoreEntitySet="Article">
+          <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PublishedDate" ColumnName="PublishedDate" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attachments">
+      <EntityTypeMapping TypeName="WordVoyagerModel.Attachment">
+        <MappingFragment StoreEntitySet="Attachment">
+          <ScalarProperty Name="AttachmentId" ColumnName="AttachmentId" />
+          <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="WordVoyagerModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="WordVoyagerModel.Comment">
+        <MappingFragment StoreEntitySet="Comment">
+          <ScalarProperty Name="CommentId" ColumnName="CommentId" />
+          <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CommentDate" ColumnName="CommentDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEEs">
+      <EntityTypeMapping TypeName="WordVoyagerModel.EMPLOYEE">
+        <MappingFragment StoreEntitySet="EMPLOYEE">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tags">
+      <EntityTypeMapping TypeName="WordVoyagerModel.Tag">
+        <MappingFragment StoreEntitySet="Tag">
+          <ScalarProperty Name="TagId" ColumnName="TagId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="WordVoyagerModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ArticleTag" TypeName="WordVoyagerModel.ArticleTag" StoreEntitySet="ArticleTag">
+      <EndProperty Name="Article">
+        <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+      </EndProperty>
+      <EndProperty Name="Tag">
+        <ScalarProperty Name="TagId" ColumnName="TagId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="uspDeleteArticleByArticleId" FunctionName="WordVoyagerModel.Store.uspDeleteArticleByArticleId" />
+    <FunctionImportMapping FunctionImportName="uspDeleteArticleTag" FunctionName="WordVoyagerModel.Store.uspDeleteArticleTag" />
+    <FunctionImportMapping FunctionImportName="uspDeleteAttachmentByArticleIdAndAttchmentId" FunctionName="WordVoyagerModel.Store.uspDeleteAttachmentByArticleIdAndAttchmentId" />
+    <FunctionImportMapping FunctionImportName="uspDeleteCategoryByCategoryId" FunctionName="WordVoyagerModel.Store.uspDeleteCategoryByCategoryId" />
+    <FunctionImportMapping FunctionImportName="uspDeleteCommentByCommentId" FunctionName="WordVoyagerModel.Store.uspDeleteCommentByCommentId" />
+    <FunctionImportMapping FunctionImportName="uspDeleteEmployee" FunctionName="WordVoyagerModel.Store.uspDeleteEmployee" />
+    <FunctionImportMapping FunctionImportName="uspDeleteTagByTagId" FunctionName="WordVoyagerModel.Store.uspDeleteTagByTagId" />
+    <FunctionImportMapping FunctionImportName="uspDeleteUserByUserId" FunctionName="WordVoyagerModel.Store.uspDeleteUserByUserId" />
+    <FunctionImportMapping FunctionImportName="uspGetAllArticles" FunctionName="WordVoyagerModel.Store.uspGetAllArticles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetAllArticles_Result">
+          <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PublishedDate" ColumnName="PublishedDate" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAllAttachementsByArticleId" FunctionName="WordVoyagerModel.Store.uspGetAllAttachementsByArticleId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetAllAttachementsByArticleId_Result">
+          <ScalarProperty Name="AttachmentId" ColumnName="AttachmentId" />
+          <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAllCategories" FunctionName="WordVoyagerModel.Store.uspGetAllCategories">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetAllCategories_Result">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAllTags" FunctionName="WordVoyagerModel.Store.uspGetAllTags">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetAllTags_Result">
+          <ScalarProperty Name="TagId" ColumnName="TagId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAllUsers" FunctionName="WordVoyagerModel.Store.uspGetAllUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetAllUsers_Result">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetArticleByArticleId" FunctionName="WordVoyagerModel.Store.uspGetArticleByArticleId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetArticleByArticleId_Result">
+          <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PublishedDate" ColumnName="PublishedDate" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetArticleTagsByArticleId" FunctionName="WordVoyagerModel.Store.uspGetArticleTagsByArticleId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetArticleTagsByArticleId_Result">
+          <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+          <ScalarProperty Name="TagId" ColumnName="TagId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAttachementByArticleIdAndAttachmentId" FunctionName="WordVoyagerModel.Store.uspGetAttachementByArticleIdAndAttachmentId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetAttachementByArticleIdAndAttachmentId_Result">
+          <ScalarProperty Name="AttachmentId" ColumnName="AttachmentId" />
+          <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetCategoryByCategoryId" FunctionName="WordVoyagerModel.Store.uspGetCategoryByCategoryId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetCategoryByCategoryId_Result">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetCommentsByArticleId" FunctionName="WordVoyagerModel.Store.uspGetCommentsByArticleId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetCommentsByArticleId_Result">
+          <ScalarProperty Name="CommentId" ColumnName="CommentId" />
+          <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CommentDate" ColumnName="CommentDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetEmployeeByEmployeeId" FunctionName="WordVoyagerModel.Store.uspGetEmployeeByEmployeeId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetEmployeeByEmployeeId_Result">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetEmployeeRecords" FunctionName="WordVoyagerModel.Store.uspGetEmployeeRecords">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetEmployeeRecords_Result">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetUserByUserId" FunctionName="WordVoyagerModel.Store.uspGetUserByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WordVoyagerModel.uspGetUserByUserId_Result">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspInsertArticle" FunctionName="WordVoyagerModel.Store.uspInsertArticle" />
+    <FunctionImportMapping FunctionImportName="uspInsertArticleTag" FunctionName="WordVoyagerModel.Store.uspInsertArticleTag" />
+    <FunctionImportMapping FunctionImportName="uspInsertAttachment" FunctionName="WordVoyagerModel.Store.uspInsertAttachment" />
+    <FunctionImportMapping FunctionImportName="uspInsertCategory" FunctionName="WordVoyagerModel.Store.uspInsertCategory" />
+    <FunctionImportMapping FunctionImportName="uspInsertComment" FunctionName="WordVoyagerModel.Store.uspInsertComment" />
+    <FunctionImportMapping FunctionImportName="uspInsertEmployee" FunctionName="WordVoyagerModel.Store.uspInsertEmployee" />
+    <FunctionImportMapping FunctionImportName="uspInsertTag" FunctionName="WordVoyagerModel.Store.uspInsertTag" />
+    <FunctionImportMapping FunctionImportName="uspInsertUser" FunctionName="WordVoyagerModel.Store.uspInsertUser" />
+    <FunctionImportMapping FunctionImportName="uspUpdateArticleByArticleId" FunctionName="WordVoyagerModel.Store.uspUpdateArticleByArticleId" />
+    <FunctionImportMapping FunctionImportName="uspUpdateCategoryByCategoryId" FunctionName="WordVoyagerModel.Store.uspUpdateCategoryByCategoryId" />
+    <FunctionImportMapping FunctionImportName="uspUpdateCommentByCommentId" FunctionName="WordVoyagerModel.Store.uspUpdateCommentByCommentId" />
+    <FunctionImportMapping FunctionImportName="uspUpdateEmployeeDepartment" FunctionName="WordVoyagerModel.Store.uspUpdateEmployeeDepartment" />
+    <FunctionImportMapping FunctionImportName="uspUpdateEmployeeDesignation" FunctionName="WordVoyagerModel.Store.uspUpdateEmployeeDesignation" />
+    <FunctionImportMapping FunctionImportName="uspUpdateEmployeeDetails" FunctionName="WordVoyagerModel.Store.uspUpdateEmployeeDetails" />
+    <FunctionImportMapping FunctionImportName="uspUpdateEmployeeName" FunctionName="WordVoyagerModel.Store.uspUpdateEmployeeName" />
+    <FunctionImportMapping FunctionImportName="uspUpdateTagNameByTagId" FunctionName="WordVoyagerModel.Store.uspUpdateTagNameByTagId" />
+    <FunctionImportMapping FunctionImportName="uspUpdateUserByUserId" FunctionName="WordVoyagerModel.Store.uspUpdateUserByUserId" />
+  </EntityContainerMapping>
+</Mapping>

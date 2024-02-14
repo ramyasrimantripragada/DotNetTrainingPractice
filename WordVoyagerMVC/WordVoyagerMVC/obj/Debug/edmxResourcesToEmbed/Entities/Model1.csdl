@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WordVoyagerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="ArticleId" />
+    </Key>
+    <Property Name="ArticleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PublishedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="AuthorId" Type="Int32" />
+    <Property Name="CategoryId" Type="Int32" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Article__AuthorI__3E52440B" FromRole="Article" ToRole="User" />
+    <NavigationProperty Name="Category" Relationship="Self.FK__Article__Categor__3F466844" FromRole="Article" ToRole="Category" />
+    <NavigationProperty Name="Attachments" Relationship="Self.FK__Attachmen__Artic__4CA06362" FromRole="Article" ToRole="Attachment" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK__Comment__Article__4222D4EF" FromRole="Article" ToRole="Comment" />
+    <NavigationProperty Name="Tags" Relationship="Self.ArticleTag" FromRole="Article" ToRole="Tag" />
+  </EntityType>
+  <EntityType Name="Attachment">
+    <Key>
+      <PropertyRef Name="AttachmentId" />
+    </Key>
+    <Property Name="AttachmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArticleId" Type="Int32" />
+    <Property Name="FileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FileType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FilePath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UploadDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Article" Relationship="Self.FK__Attachmen__Artic__4CA06362" FromRole="Attachment" ToRole="Article" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Articles" Relationship="Self.FK__Article__Categor__3F466844" FromRole="Category" ToRole="Article" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="CommentId" />
+    </Key>
+    <Property Name="CommentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArticleId" Type="Int32" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CommentDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Article" Relationship="Self.FK__Comment__Article__4222D4EF" FromRole="Comment" ToRole="Article" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Comment__UserId__4316F928" FromRole="Comment" ToRole="User" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Designation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Department" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="JoiningDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="TagId" />
+    </Key>
+    <Property Name="TagId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Articles" Relationship="Self.ArticleTag" FromRole="Tag" ToRole="Article" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RegistrationDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Articles" Relationship="Self.FK__Article__AuthorI__3E52440B" FromRole="User" ToRole="Article" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK__Comment__UserId__4316F928" FromRole="User" ToRole="Comment" />
+  </EntityType>
+  <Association Name="FK__Article__AuthorI__3E52440B">
+    <End Role="User" Type="Self.User" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="AuthorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Article__Categor__3F466844">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Attachmen__Artic__4CA06362">
+    <End Role="Article" Type="Self.Article" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Attachment" Type="Self.Attachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="ArticleId" />
+      </Principal>
+      <Dependent Role="Attachment">
+        <PropertyRef Name="ArticleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comment__Article__4222D4EF">
+    <End Role="Article" Type="Self.Article" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="ArticleId" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="ArticleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comment__UserId__4316F928">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ArticleTag">
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
+    <End Role="Tag" Type="Self.Tag" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="WordVoyagerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Articles" EntityType="Self.Article" />
+    <EntitySet Name="Attachments" EntityType="Self.Attachment" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Comments" EntityType="Self.Comment" />
+    <EntitySet Name="EMPLOYEEs" EntityType="Self.EMPLOYEE" />
+    <EntitySet Name="Tags" EntityType="Self.Tag" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__Article__AuthorI__3E52440B" Association="Self.FK__Article__AuthorI__3E52440B">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Article" EntitySet="Articles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Article__Categor__3F466844" Association="Self.FK__Article__Categor__3F466844">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Article" EntitySet="Articles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Attachmen__Artic__4CA06362" Association="Self.FK__Attachmen__Artic__4CA06362">
+      <End Role="Article" EntitySet="Articles" />
+      <End Role="Attachment" EntitySet="Attachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comment__Article__4222D4EF" Association="Self.FK__Comment__Article__4222D4EF">
+      <End Role="Article" EntitySet="Articles" />
+      <End Role="Comment" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comment__UserId__4316F928" Association="Self.FK__Comment__UserId__4316F928">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Comment" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="ArticleTag" Association="Self.ArticleTag">
+      <End Role="Article" EntitySet="Articles" />
+      <End Role="Tag" EntitySet="Tags" />
+    </AssociationSet>
+    <FunctionImport Name="uspDeleteArticleByArticleId">
+      <Parameter Name="ArticleId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspDeleteArticleTag">
+      <Parameter Name="ArticleId" Mode="In" Type="Int32" />
+      <Parameter Name="TagId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspDeleteAttachmentByArticleIdAndAttchmentId">
+      <Parameter Name="ArticleId" Mode="In" Type="Int32" />
+      <Parameter Name="AttachmentId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspDeleteCategoryByCategoryId">
+      <Parameter Name="CategoryId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspDeleteCommentByCommentId">
+      <Parameter Name="CommentId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspDeleteEmployee">
+      <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspDeleteTagByTagId">
+      <Parameter Name="TagId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspDeleteUserByUserId">
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspGetAllArticles" ReturnType="Collection(WordVoyagerModel.uspGetAllArticles_Result)" />
+    <FunctionImport Name="uspGetAllAttachementsByArticleId" ReturnType="Collection(WordVoyagerModel.uspGetAllAttachementsByArticleId_Result)">
+      <Parameter Name="ArticleId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspGetAllCategories" ReturnType="Collection(WordVoyagerModel.uspGetAllCategories_Result)" />
+    <FunctionImport Name="uspGetAllTags" ReturnType="Collection(WordVoyagerModel.uspGetAllTags_Result)" />
+    <FunctionImport Name="uspGetAllUsers" ReturnType="Collection(WordVoyagerModel.uspGetAllUsers_Result)" />
+    <FunctionImport Name="uspGetArticleByArticleId" ReturnType="Collection(WordVoyagerModel.uspGetArticleByArticleId_Result)">
+      <Parameter Name="ArticleId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspGetArticleTagsByArticleId" ReturnType="Collection(WordVoyagerModel.uspGetArticleTagsByArticleId_Result)">
+      <Parameter Name="ArticleId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspGetAttachementByArticleIdAndAttachmentId" ReturnType="Collection(WordVoyagerModel.uspGetAttachementByArticleIdAndAttachmentId_Result)">
+      <Parameter Name="ArticleId" Mode="In" Type="Int32" />
+      <Parameter Name="AttachmentId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspGetCategoryByCategoryId" ReturnType="Collection(WordVoyagerModel.uspGetCategoryByCategoryId_Result)">
+      <Parameter Name="CategoryId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspGetCommentsByArticleId" ReturnType="Collection(WordVoyagerModel.uspGetCommentsByArticleId_Result)">
+      <Parameter Name="ArticleId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspGetEmployeeByEmployeeId" ReturnType="Collection(WordVoyagerModel.uspGetEmployeeByEmployeeId_Result)">
+      <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspGetEmployeeRecords" ReturnType="Collection(WordVoyagerModel.uspGetEmployeeRecords_Result)" />
+    <FunctionImport Name="uspGetUserByUserId" ReturnType="Collection(WordVoyagerModel.uspGetUserByUserId_Result)">
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspInsertArticle">
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="Content" Mode="In" Type="String" />
+      <Parameter Name="AuthorId" Mode="In" Type="Int32" />
+      <Parameter Name="CategoryId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspInsertArticleTag">
+      <Parameter Name="ArticleId" Mode="In" Type="Int32" />
+      <Parameter Name="TagId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspInsertAttachment">
+      <Parameter Name="ArticleId" Mode="In" Type="Int32" />
+      <Parameter Name="FileName" Mode="In" Type="String" />
+      <Parameter Name="FileType" Mode="In" Type="String" />
+      <Parameter Name="FilePath" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspInsertCategory">
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspInsertComment">
+      <Parameter Name="ArticleId" Mode="In" Type="Int32" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+      <Parameter Name="Content" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspInsertEmployee">
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Designation" Mode="In" Type="String" />
+      <Parameter Name="Department" Mode="In" Type="String" />
+      <Parameter Name="EmployeeId" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspInsertTag">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspInsertUser">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="PasswordHash" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspUpdateArticleByArticleId">
+      <Parameter Name="ArticleId" Mode="In" Type="Int32" />
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="Content" Mode="In" Type="String" />
+      <Parameter Name="CategoryId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspUpdateCategoryByCategoryId">
+      <Parameter Name="CategoryId" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspUpdateCommentByCommentId">
+      <Parameter Name="CommentId" Mode="In" Type="Int32" />
+      <Parameter Name="Content" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspUpdateEmployeeDepartment">
+      <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
+      <Parameter Name="Department" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspUpdateEmployeeDesignation">
+      <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
+      <Parameter Name="Designation" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspUpdateEmployeeDetails">
+      <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Designation" Mode="In" Type="String" />
+      <Parameter Name="Department" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspUpdateEmployeeName">
+      <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspUpdateTagNameByTagId">
+      <Parameter Name="TagId" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspUpdateUserByUserId">
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="PasswordHash" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="uspGetAllArticles_Result">
+    <Property Type="Int32" Name="ArticleId" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Content" Nullable="false" MaxLength="Max" />
+    <Property Type="DateTime" Name="PublishedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="LastModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="AuthorId" Nullable="true" />
+    <Property Type="Int32" Name="CategoryId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="uspGetAllAttachementsByArticleId_Result">
+    <Property Type="Int32" Name="AttachmentId" Nullable="false" />
+    <Property Type="Int32" Name="ArticleId" Nullable="true" />
+    <Property Type="String" Name="FileName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="FileType" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="FilePath" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="UploadDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="uspGetAllCategories_Result">
+    <Property Type="Int32" Name="CategoryId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="uspGetAllTags_Result">
+    <Property Type="Int32" Name="TagId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="uspGetAllUsers_Result">
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="PasswordHash" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="RegistrationDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="uspGetArticleByArticleId_Result">
+    <Property Type="Int32" Name="ArticleId" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Content" Nullable="false" MaxLength="Max" />
+    <Property Type="DateTime" Name="PublishedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="LastModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="AuthorId" Nullable="true" />
+    <Property Type="Int32" Name="CategoryId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="uspGetArticleTagsByArticleId_Result">
+    <Property Type="Int32" Name="ArticleId" Nullable="false" />
+    <Property Type="Int32" Name="TagId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="uspGetAttachementByArticleIdAndAttachmentId_Result">
+    <Property Type="Int32" Name="AttachmentId" Nullable="false" />
+    <Property Type="Int32" Name="ArticleId" Nullable="true" />
+    <Property Type="String" Name="FileName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="FileType" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="FilePath" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="UploadDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="uspGetCategoryByCategoryId_Result">
+    <Property Type="Int32" Name="CategoryId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="uspGetCommentsByArticleId_Result">
+    <Property Type="Int32" Name="CommentId" Nullable="false" />
+    <Property Type="Int32" Name="ArticleId" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="String" Name="Content" Nullable="false" MaxLength="Max" />
+    <Property Type="DateTime" Name="CommentDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="uspGetEmployeeByEmployeeId_Result">
+    <Property Type="Int32" Name="EmployeeId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Designation" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Department" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="JoiningDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="uspGetEmployeeRecords_Result">
+    <Property Type="Int32" Name="EmployeeId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Designation" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Department" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="JoiningDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="uspGetUserByUserId_Result">
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="PasswordHash" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="RegistrationDate" Nullable="true" Precision="23" />
+  </ComplexType>
+</Schema>
